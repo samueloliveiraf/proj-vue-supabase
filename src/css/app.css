@@ -1,0 +1,21 @@
+/* app global css */
+
+body {
+  background-color: #f2f2f2;
+}
+
+.my-card {
+  border-radius: 1.5rem;
+}
+
+.full-width {
+  margin-top: 0.8rem;
+}
+
+.q-input {
+  margin-top: 1rem;
+}
+
+.q-drawer {
+  background-color: #f2f2f2;
+}
