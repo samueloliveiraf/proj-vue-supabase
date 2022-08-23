@@ -1,27 +1,32 @@
 <template>
   <q-page padding>
-    <q-form class="row justify-center" @submit.prevent="handlePasswordReset()">
-      <p class="col-12 text-h5 text-center"> Resetar Senha </p>
+    <q-form class="window-height row justify-center items-center" @submit.prevent="handlePasswordReset()">
       <div class="col-md-4 col-sm-6 col-xs-10 q-gutter-y-md">
+        <q-card class="my-card q-gutter-y-md">
+          <q-card-section>
+            <p class="col-12 text-h5 text-center"> Resetar Senha </p>
+              <q-input
+                label="Nova senha"
+                v-model="password"
+                lazy-rules
+                outlined
+                dense
+                rounded
+                :rules="[val => (val && val.length >= 6) || 'Senha obrigatória!']"
+              />
 
-        <q-input
-          label="Nova senha"
-          v-model="password"
-          lazy-rules
-          :rules="[val => (val && val.length >= 6) || 'Password is required']"
-        />
-
-        <div class="full-width q-pt-md q-gutter-y-sm">
-          <q-btn
-            label="Enviar nova senha"
-            color="primary"
-            class="full-width"
-            outline
-            rounded
-            type="submit"
-          />
+              <div class="full-width q-pt-md q-gutter-y-sm">
+                <q-btn
+                  label="Enviar nova senha"
+                  color="primary"
+                  class="full-width"
+                  rounded
+                  type="submit"
+                />
+              </div>
+            </q-card-section>
+          </q-card>
         </div>
-      </div>
     </q-form>
   </q-page>
 </template>

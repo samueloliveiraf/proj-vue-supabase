@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Estoque
         </q-toolbar-title>
 
         <q-btn-dropdown flat color="white" icon="person">
@@ -37,7 +37,7 @@
         <q-item-label
           header
         >
-          Essential Links
+          Menu
         </q-item-label>
 
         <EssentialLink
@@ -63,10 +63,14 @@ import { useQuasar } from 'quasar'
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
+    title: 'Home',
+    icon: 'home',
+    routeName: 'home'
+  },
+  {
+    title: 'Categoria',
+    icon: 'category',
+    routeName: 'categoty'
   }
 ]
 
